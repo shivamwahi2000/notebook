@@ -1,0 +1,22 @@
+import random
+
+# List of individuals
+individuals = [
+    "Severin Schneebeli", 
+    "Jianing Li", 
+    "Nathaniel Mabe", 
+    "Rob Stahelin", 
+    "Tonglei Li", 
+    "Sandro Matosevic"
+]
+
+# Generate ranks
+ranks = list(range(1, len(individuals) + 1))
+random.shuffle(ranks)  # Shuffle the ranks to randomize assignments
+
+# Assign ranks to individuals
+ranked_individuals = dict(zip(individuals, ranks))
+
+# Display the results
+for individual, rank in ranked_individuals.items():
+    print(f"{individual}: Rank {rank}")
